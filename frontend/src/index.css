@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@300;400&family=Roboto:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      @apply font-poppins;
+    }
+  
+    body {
+      @apply font-fredoka;
+    }
+  
+    p,
+    span {
+      @apply font-roboto;
+    }
+  }
+  
+  @layer utilities {
+    .font-poppins {
+      font-family: "Poppins", sans-serif;
+    }
+  
+    .font-fredoka {
+      font-family: "Fredoka", sans-serif;
+    }
+  
+    .font-roboto {
+      font-family: "Roboto", sans-serif;
+    }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .slick-slide {
+    display: flex;
+    flex-direction: row; /* Ensure it's horizontal */
+    justify-content: center; /* Optional: Center items inside each slide */
+  }
+  
+  .slick-track {
+    display: flex; /* Ensure the track is horizontal */
+    flex-direction: row; /* Ensure the track layout is horizontal */
+  }
+  
+  .slick-list {
+    overflow: hidden;
+    display: block;
+  }
+  .slick-dots {
+    bottom: 10px; /* Adjust the position of dots */
+    display: flex;
+    justify-content: center; /* Center the dots */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 18px; /* Adjust the size of the dots */
+    color: white; /* Set the color */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: orange; /* Active dot color */
+  }
+
+/* Arrow style */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Positioning for next arrow (right) */
+.slick-next {
+  right: -30px; /* Adjust this value to set the distance from the right */
+}
+
+/* Positioning for prev arrow (left) */
+.slick-prev {
+  left: -30px; /* Adjust this value to set the distance from the left */
+}
+
+/* Position the next and prev buttons on the left and right */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Positioning for next button (right) */
+.slick-next {
+  right: -50px; /* Adjust this value to set the distance from the right */
+}
+
+/* Positioning for prev button (left) */
+.slick-prev {
+  left: -50px; /* Adjust this value to set the distance from the left */
+}
